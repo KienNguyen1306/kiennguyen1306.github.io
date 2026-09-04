@@ -1,321 +1,811 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Fonita al Rescate | Material Didáctico</title>
+<title>Fonita al Rescate | Material Didáctico</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #ffffff;
-      color: #302060;
-    }
+:root{
+  --morado:#6d39d8;
+  --morado-oscuro:#3f197f;
+  --morado-claro:#eee7ff;
+  --rosa:#ef2b98;
+  --rosa-claro:#ffe8f5;
+  --turquesa:#12b9c5;
+  --turquesa-claro:#e4fbfc;
+  --texto:#271250;
+  --blanco:#ffffff;
+}
 
-    header {
-      padding: 25px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
-    .logo {
-      font-size: 32px;
-      font-weight: bold;
-      color: #713bd5;
-    }
+html{
+  scroll-behavior:smooth;
+}
 
-    .logo span {
-      color: #ef2992;
-    }
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  background:white;
+  color:var(--texto);
+  line-height:1.5;
+}
 
-    nav a {
-      text-decoration: none;
-      color: #302060;
-      margin: 10px;
-      font-weight: bold;
-    }
 
-    .hero {
-      min-height: 480px;
-      padding: 70px 8%;
-      background: linear-gradient(135deg,#fff8fc,#f4efff,#effcfd);
-      display: flex;
-      align-items: center;
-    }
+/* ENCABEZADO */
 
-    .hero-content {
-      max-width: 700px;
-    }
+header{
+  background:white;
+  padding:14px 6%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+  flex-wrap:wrap;
+  box-shadow:0 3px 18px rgba(70,35,120,.08);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
 
-    .hero h1 {
-      font-size: 64px;
-      line-height: 1.05;
-      color: #6735cc;
-      margin-bottom: 25px;
-    }
+.marca{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
 
-    .hero h1 span {
-      color: #ed2792;
-    }
+.logo-perfil{
+  width:75px;
+  height:75px;
+  object-fit:cover;
+  border-radius:50%;
+  border:4px solid var(--morado-claro);
+}
 
-    .hero p {
-      font-size: 20px;
-      line-height: 1.6;
-      max-width: 620px;
-    }
+.nombre-marca{
+  font-size:27px;
+  font-weight:900;
+  color:var(--morado);
+}
 
-    .boton {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 16px 32px;
-      background: #ed2792;
-      color: white;
-      text-decoration: none;
-      border-radius: 30px;
-      font-size: 18px;
-      font-weight: bold;
-    }
+.nombre-marca span{
+  color:var(--rosa);
+}
 
-    section {
-      padding: 60px 6%;
-    }
+.submarca{
+  font-size:11px;
+  letter-spacing:2px;
+  font-weight:bold;
+  color:var(--morado-oscuro);
+}
 
-    h2 {
-      text-align: center;
-      color: #6735cc;
-      font-size: 38px;
-      margin-bottom: 40px;
-    }
+nav{
+  display:flex;
+  gap:25px;
+  flex-wrap:wrap;
+}
 
-    .categorias {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
-      gap: 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
+nav a{
+  text-decoration:none;
+  color:var(--texto);
+  font-weight:700;
+}
 
-    .categoria {
-      padding: 30px 15px;
-      text-align: center;
-      background: #faf6ff;
-      border-radius: 22px;
-      font-weight: bold;
-    }
+nav a:hover{
+  color:var(--rosa);
+}
 
-    .productos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
-      gap: 30px;
-      max-width: 1150px;
-      margin: auto;
-    }
 
-    .producto {
-      background: white;
-      border: 2px solid #eee5ff;
-      border-radius: 25px;
-      padding: 25px;
-      text-align: center;
-      box-shadow: 0 8px 25px rgba(91,52,170,.10);
-    }
+/* PORTADA */
 
-    .producto h3 {
-      font-size: 22px;
-      color: #5224a8;
-      margin-bottom: 12px;
-    }
+.hero{
+  min-height:590px;
+  padding:65px 7%;
+  display:grid;
+  grid-template-columns:1.25fr .75fr;
+  gap:55px;
+  align-items:center;
+  background:
+    radial-gradient(circle at 8% 20%, #ffe8f5 0, transparent 26%),
+    radial-gradient(circle at 90% 15%, #e4fbfc 0, transparent 26%),
+    linear-gradient(135deg,#fff,#f5efff);
+}
 
-    .precio {
-      color: #009faf;
-      font-size: 30px;
-      font-weight: bold;
-      margin: 15px;
-    }
+.hero h1{
+  font-size:66px;
+  line-height:1.02;
+  color:var(--morado);
+  margin-bottom:25px;
+}
 
-    .producto p {
-      line-height: 1.5;
-    }
+.hero h1 span{
+  color:var(--rosa);
+}
 
-    .producto a {
-      display: inline-block;
-      padding: 12px 25px;
-      margin-top: 15px;
-      border-radius: 25px;
-      background: #ed2792;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
+.hero p{
+  font-size:21px;
+  max-width:650px;
+  margin-bottom:30px;
+}
 
-    .beneficios {
-      background: #f5f0ff;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 45px;
-      text-align: center;
-    }
+.boton{
+  display:inline-block;
+  background:linear-gradient(90deg,var(--rosa),#d91c87);
+  color:white;
+  text-decoration:none;
+  padding:17px 34px;
+  border-radius:40px;
+  font-size:18px;
+  font-weight:800;
+  box-shadow:0 8px 20px rgba(239,43,152,.22);
+}
 
-    .beneficio {
-      max-width: 200px;
-      font-weight: bold;
-    }
+.boton:hover{
+  transform:translateY(-2px);
+}
 
-    .corazon {
-      font-size: 35px;
-      color: #ed2792;
-    }
+.hero-logo{
+  text-align:center;
+}
 
-    footer {
-      background: #7041cf;
-      color: white;
-      text-align: center;
-      padding: 45px 20px;
-    }
+.hero-logo img{
+  width:min(390px,90%);
+  border-radius:35px;
+  box-shadow:0 18px 40px rgba(82,46,145,.18);
+}
 
-    footer h3 {
-      font-size: 30px;
-      margin-bottom: 12px;
-    }
 
-    @media(max-width:700px) {
-      .hero h1 {
-        font-size: 44px;
-      }
+/* BENEFICIOS SUPERIORES */
 
-      nav {
-        margin-top: 20px;
-      }
-    }
-  </style>
+.mini-beneficios{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+  margin-top:40px;
+  max-width:700px;
+}
+
+.mini{
+  font-size:14px;
+  font-weight:bold;
+  display:flex;
+  gap:9px;
+  align-items:center;
+}
+
+.icono{
+  font-size:25px;
+  color:var(--turquesa);
+}
+
+
+/* SECCIONES */
+
+section{
+  padding:70px 6%;
+}
+
+.titulo-seccion{
+  text-align:center;
+  color:var(--morado);
+  font-size:40px;
+  margin-bottom:45px;
+}
+
+.titulo-seccion span{
+  color:var(--rosa);
+}
+
+
+/* CATEGORÍAS */
+
+.categorias{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:18px;
+}
+
+.categoria{
+  min-height:190px;
+  border-radius:28px;
+  padding:25px 15px;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  box-shadow:0 8px 20px rgba(70,30,130,.08);
+  transition:.2s;
+}
+
+.categoria:hover{
+  transform:translateY(-5px);
+}
+
+.categoria:nth-child(1),
+.categoria:nth-child(4){
+  background:var(--rosa-claro);
+}
+
+.categoria:nth-child(2),
+.categoria:nth-child(6){
+  background:var(--morado-claro);
+}
+
+.categoria:nth-child(3),
+.categoria:nth-child(5){
+  background:var(--turquesa-claro);
+}
+
+.emoji{
+  font-size:42px;
+  margin-bottom:12px;
+}
+
+.categoria h3{
+  font-size:17px;
+  color:var(--morado-oscuro);
+}
+
+
+/* FRASE */
+
+.frase{
+  background:linear-gradient(100deg,#f2eaff,#e4fbfc,#ffe8f5);
+  text-align:center;
+  padding:65px 20px;
+}
+
+.frase h2{
+  color:var(--morado);
+  font-size:39px;
+}
+
+.frase h2 span{
+  color:var(--rosa);
+}
+
+.frase p{
+  font-size:19px;
+  margin-top:15px;
+}
+
+
+/* PRODUCTOS */
+
+#materiales{
+  background:#fff;
+}
+
+.productos{
+  max-width:1150px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+}
+
+.producto{
+  background:white;
+  border-radius:28px;
+  padding:28px;
+  text-align:center;
+  border:2px solid #eee7ff;
+  box-shadow:0 10px 28px rgba(68,32,125,.09);
+}
+
+.producto-icono{
+  height:150px;
+  border-radius:22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:70px;
+  margin-bottom:22px;
+}
+
+.producto:nth-child(1) .producto-icono{
+  background:var(--rosa-claro);
+}
+
+.producto:nth-child(2) .producto-icono{
+  background:var(--turquesa-claro);
+}
+
+.producto:nth-child(3) .producto-icono{
+  background:var(--morado-claro);
+}
+
+.producto h3{
+  color:var(--morado-oscuro);
+  font-size:23px;
+  margin-bottom:12px;
+}
+
+.producto p{
+  min-height:72px;
+}
+
+.precio{
+  font-size:31px;
+  color:var(--turquesa);
+  font-weight:900;
+  margin:18px 0;
+}
+
+.boton-producto{
+  display:inline-block;
+  padding:12px 26px;
+  border-radius:30px;
+  background:var(--rosa);
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+
+/* TALLERES INDIVIDUALES */
+
+.talleres{
+  background:#fbf9ff;
+}
+
+.lista-talleres{
+  max-width:1250px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.taller{
+  background:white;
+  border-radius:22px;
+  padding:23px;
+  border:2px solid #eee8ff;
+  box-shadow:0 6px 16px rgba(80,45,130,.07);
+}
+
+.numero{
+  display:inline-flex;
+  width:36px;
+  height:36px;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  color:white;
+  background:var(--morado);
+  font-weight:bold;
+  margin-bottom:12px;
+}
+
+.taller h3{
+  color:var(--morado-oscuro);
+  margin-bottom:7px;
+}
+
+.tipo{
+  color:var(--rosa);
+  font-weight:bold;
+  font-size:14px;
+}
+
+.precio-taller{
+  color:var(--turquesa);
+  font-size:22px;
+  font-weight:bold;
+  margin-top:10px;
+}
+
+
+/* NOSOTROS */
+
+.creado{
+  display:grid;
+  grid-template-columns:.7fr 1.3fr;
+  gap:50px;
+  max-width:1050px;
+  margin:auto;
+  align-items:center;
+}
+
+.creado img{
+  width:100%;
+  max-width:300px;
+  border-radius:50%;
+  border:8px solid var(--morado-claro);
+}
+
+.creado h2{
+  color:var(--morado);
+  font-size:38px;
+  margin-bottom:18px;
+}
+
+.creado h2 span{
+  color:var(--rosa);
+}
+
+.creado p{
+  font-size:18px;
+  margin-bottom:14px;
+}
+
+
+/* FRANJA FINAL */
+
+.frase-final{
+  background:linear-gradient(90deg,var(--morado-oscuro),var(--morado));
+  color:white;
+  text-align:center;
+  padding:55px 20px;
+}
+
+.frase-final h2{
+  font-size:38px;
+}
+
+.frase-final span{
+  color:#64e4e9;
+}
+
+
+/* FOOTER */
+
+footer{
+  background:#29104f;
+  color:white;
+  padding:45px 7%;
+  text-align:center;
+}
+
+footer h2{
+  color:white;
+  font-size:30px;
+  margin-bottom:10px;
+}
+
+.instagram{
+  display:inline-block;
+  margin-top:20px;
+  padding:13px 28px;
+  background:var(--rosa);
+  color:white;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:bold;
+}
+
+
+/* CELULAR */
+
+@media(max-width:950px){
+
+  .hero{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .hero p{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .mini-beneficios{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .categorias{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .productos{
+    grid-template-columns:1fr;
+  }
+
+  .lista-talleres{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .creado{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .creado img{
+    margin:auto;
+  }
+
+}
+
+@media(max-width:600px){
+
+  header{
+    justify-content:center;
+  }
+
+  nav{
+    justify-content:center;
+    gap:12px;
+  }
+
+  .hero h1{
+    font-size:44px;
+  }
+
+  .hero{
+    padding:45px 7%;
+  }
+
+  .mini-beneficios{
+    grid-template-columns:1fr;
+  }
+
+  .categorias{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .lista-talleres{
+    grid-template-columns:1fr;
+  }
+
+  .titulo-seccion{
+    font-size:32px;
+  }
+
+}
+
+</style>
 </head>
+
 
 <body>
 
+
 <header>
 
-  <div class="logo">
-    Fonita <span>al Rescate</span>
-  </div>
+<div class="marca">
 
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#categorias">Categorías</a>
-    <a href="#materiales">Materiales</a>
-    <a href="#packs">Packs</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+<img
+class="logo-perfil"
+src="./WhatsApp%20Image%202026-09-04%20at%2016.02.06.jpeg"
+alt="Fonita al Rescate">
+
+<div>
+<div class="nombre-marca">
+Fonita <span>al Rescate</span>
+</div>
+
+<div class="submarca">
+MATERIAL DIDÁCTICO CON PROPÓSITO
+</div>
+</div>
+
+</div>
+
+
+<nav>
+
+<a href="#inicio">Inicio</a>
+<a href="#categorias">Categorías</a>
+<a href="#materiales">Materiales</a>
+<a href="#talleres">Talleres</a>
+<a href="#contacto">Contacto</a>
+
+</nav>
 
 </header>
 
 
+
 <section class="hero" id="inicio">
 
-  <div class="hero-content">
+<div>
 
-    <h1>
-      Material didáctico<br>
-      <span>con propósito</span>
-    </h1>
+<h1>
+Material didáctico<br>
+<span>con propósito ♡</span>
+</h1>
 
-    <p>
-      Recursos creativos, funcionales y hechos con mucho cariño
-      para apoyar el desarrollo del lenguaje, la comunicación,
-      la lectura, la escritura y el aprendizaje.
-    </p>
+<p>
+Recursos creativos, funcionales y hechos con mucho cariño para
+apoyar el desarrollo del lenguaje, la comunicación, la lectura,
+la escritura y el aprendizaje.
+</p>
 
-    <a class="boton" href="#materiales">
-      Explora la tienda ♥
-    </a>
+<a href="#materiales" class="boton">
+Explora la tienda ♡
+</a>
 
-  </div>
+
+<div class="mini-beneficios">
+
+<div class="mini">
+<span class="icono">♡</span>
+Diseñado por una fonoaudióloga
+</div>
+
+<div class="mini">
+<span class="icono">★</span>
+Listo para usar en aula y terapias
+</div>
+
+<div class="mini">
+<span class="icono">↓</span>
+Imprimible, proyectable y plastificable
+</div>
+
+</div>
+
+</div>
+
+
+<div class="hero-logo">
+
+<img
+src="./WhatsApp%20Image%202026-09-04%20at%2016.02.06.jpeg"
+alt="Logo Fonita al Rescate">
+
+</div>
 
 </section>
+
 
 
 <section id="categorias">
 
-<h2>Explora por categoría ♡</h2>
+<h2 class="titulo-seccion">
+Explora por <span>categoría ♡</span>
+</h2>
+
 
 <div class="categorias">
 
-  <div class="categoria">👄<br><br>Fonemas y dífonos</div>
+<div class="categoria">
+<div class="emoji">💬</div>
+<h3>Lenguaje y comunicación</h3>
+</div>
 
-  <div class="categoria">📖<br><br>Comprensión lectora</div>
+<div class="categoria">
+<div class="emoji">📖</div>
+<h3>Comprensión lectora</h3>
+</div>
 
-  <div class="categoria">🧠<br><br>Conciencia fonológica</div>
+<div class="categoria">
+<div class="emoji">🧠</div>
+<h3>Conciencia fonológica</h3>
+</div>
 
-  <div class="categoria">✏️<br><br>Lectoescritura</div>
+<div class="categoria">
+<div class="emoji">✏️</div>
+<h3>Lectoescritura</h3>
+</div>
 
-  <div class="categoria">🧩<br><br>Talleres y actividades</div>
+<div class="categoria">
+<div class="emoji">🧩</div>
+<h3>Dífonos consonánticos</h3>
+</div>
 
-  <div class="categoria">⭐<br><br>Packs y promociones</div>
+<div class="categoria">
+<div class="emoji">⭐</div>
+<h3>Packs y promociones</h3>
+</div>
 
 </div>
 
 </section>
+
+
+
+<div class="frase">
+
+<h2>
+Pequeños pasos, <span>grandes logros ♡</span>
+</h2>
+
+<p>
+Materiales que inspiran, acompañan y transforman.
+</p>
+
+</div>
+
 
 
 <section id="materiales">
 
-<h2>Materiales destacados ♡</h2>
+<h2 class="titulo-seccion">
+Materiales <span>destacados ♡</span>
+</h2>
+
 
 <div class="productos">
 
 
 <div class="producto">
 
-<h3>Pack Comprensión Lectora</h3>
+<div class="producto-icono">
+📚
+</div>
+
+<h3>
+Pack Comprensión Lectora
+</h3>
 
 <p>
 9 talleres completos, proyectables e imprimibles.
+Cuentos, fábula, canción, poema, leyenda y texto funcional.
 </p>
 
-<div class="precio">$24.990</div>
+<div class="precio">
+$24.990 CLP
+</div>
 
-<a href="#">Ver material</a>
+<a class="boton-producto" href="#talleres">
+Ver material
+</a>
 
 </div>
 
 
+
 <div class="producto">
 
-<h3>Pack 13 Dífonos Consonánticos</h3>
+<div class="producto-icono">
+🔤
+</div>
+
+<h3>
+Pack 13 Dífonos Consonánticos
+</h3>
 
 <p>
-Más de 260 diapositivas para trabajar,
+13 talleres completos y más de 260 diapositivas para trabajar,
 reforzar y automatizar cada sonido.
 </p>
 
-<div class="precio">$29.990</div>
+<div class="precio">
+$29.990 CLP
+</div>
 
-<a href="#">Ver material</a>
+<a class="boton-producto" href="#">
+Ver material
+</a>
 
 </div>
 
 
+
 <div class="producto">
 
-<h3>Talleres de los Fonemas</h3>
+<div class="producto-icono">
+👄
+</div>
+
+<h3>
+Talleres de los Fonemas
+</h3>
 
 <p>
-Material proyectable e imprimible para
-estimular lenguaje, articulación y conciencia fonológica.
+Material proyectable e imprimible para trabajar articulación,
+lenguaje y conciencia fonológica.
 </p>
 
-<div class="precio">Desde $6.000</div>
+<div class="precio">
+Desde $6.000
+</div>
 
-<a href="#">Ver talleres</a>
+<a class="boton-producto" href="#">
+Ver talleres
+</a>
 
 </div>
 
@@ -323,84 +813,129 @@ estimular lenguaje, articulación y conciencia fonológica.
 </div>
 
 </section>
+
+
+
+<section class="talleres" id="talleres">
+
+<h2 class="titulo-seccion">
+Talleres de Comprensión Lectora
+<span>individuales ♡</span>
+</h2>
+
+
+<div class="lista-talleres">
+
+
+<div class="taller">
+<div class="numero">1</div>
+<h3>Pedrito y el Lobo</h3>
+<div class="tipo">FÁBULA</div>
+<div class="precio-taller">$5.000</div>
+</div>
+
+
+<div class="taller">
+<div class="numero">2</div>
+<h3>Pepa aprende a compartir</h3>
+<div class="tipo">CUENTO</div>
+<div class="precio-taller">$5.000</div>
+</div>
+
+
+<div class="taller">
+<div class="numero">3</div>
+<h3>Titín el Calcetín</h3>
+<div class="tipo">CUENTO</div>
+<div class="precio-taller">$5.000</div>
+</div>
+
+
+<div class="taller">
+<div class="numero">4</div>
+<h3>Lolo aprende “Gracias” y “Por favor”</h3>
+<div class="tipo">CUENTO</div>
+<div class="precio-taller">$5.000</div>
+</div>
+
+
+<div class="taller">
+<div class="numero">5</div>
+<h3>Esperanza</h3>
+<div class="tipo">CUENTO</div>
+<div class="precio-taller">$5.000</div>
+</div>
+
+
+<div class="taller">
+<div class="numero">6</div>
+<h3>Tren del Cielo</h3>
+<div class="tipo">CANCIÓN</div>
+<div class="precio-taller">$5.000</div>
+</div>
+
+
+<div class="taller">
+<div class="numero">7</div>
+<h3>Mi Cometa de Colores</h3>
+<div class="tipo">POEMA</div>
+<div class="precio-taller">$5.000</div>
+</div>
+
+
+<div class="taller">
+<div class="numero">8</div>
+<h3>La Leyenda del Copihue</h3>
+<div class="tipo">LEYENDA</div>
+<div class="precio-taller">$5.000</div>
+</div>
+
+
+<div class="taller">
+<div class="numero">9</div>
+<h3>La Receta de la Felicidad y el Respeto</h3>
+<div class="tipo">TEXTO FUNCIONAL</div>
+<div class="precio-taller">$5.000</div>
+</div>
+
+
+</div>
+
+</section>
+
 
 
 <section>
 
-<h2>Talleres de Comprensión Lectora ♡</h2>
-
-<div class="productos">
+<div class="creado">
 
 
-<div class="producto">
-<h3>Pedrito y el Lobo</h3>
-<p>Fábula</p>
-<div class="precio">$5.000</div>
-<a href="#">Ver taller</a>
+<div>
+
+<img
+src="./WhatsApp%20Image%202026-09-04%20at%2016.02.06.jpeg"
+alt="Fonita al Rescate">
+
 </div>
 
 
-<div class="producto">
-<h3>Pepa aprende a compartir</h3>
-<p>Cuento</p>
-<div class="precio">$5.000</div>
-<a href="#">Ver taller</a>
-</div>
+<div>
 
+<h2>
+Material creado <span>con propósito ♡</span>
+</h2>
 
-<div class="producto">
-<h3>Titín el Calcetín</h3>
-<p>Cuento</p>
-<div class="precio">$5.000</div>
-<a href="#">Ver taller</a>
-</div>
+<p>
+Fonita al Rescate nace para crear materiales educativos que
+acompañen el desarrollo de la comunicación, el lenguaje y el aprendizaje.
+</p>
 
+<p>
+Recursos pensados especialmente para fonoaudiólogos,
+docentes, educadoras, familias, aula común,
+aula de recursos y terapias.
+</p>
 
-<div class="producto">
-<h3>Lolo aprende “Gracias” y “Por favor”</h3>
-<p>Cuento</p>
-<div class="precio">$5.000</div>
-<a href="#">Ver taller</a>
-</div>
-
-
-<div class="producto">
-<h3>Esperanza</h3>
-<p>Cuento</p>
-<div class="precio">$5.000</div>
-<a href="#">Ver taller</a>
-</div>
-
-
-<div class="producto">
-<h3>Tren del Cielo</h3>
-<p>Canción</p>
-<div class="precio">$5.000</div>
-<a href="#">Ver taller</a>
-</div>
-
-
-<div class="producto">
-<h3>Mi Cometa de Colores</h3>
-<p>Poema</p>
-<div class="precio">$5.000</div>
-<a href="#">Ver taller</a>
-</div>
-
-
-<div class="producto">
-<h3>La Leyenda del Copihue</h3>
-<p>Leyenda</p>
-<div class="precio">$5.000</div>
-<a href="#">Ver taller</a>
-</div>
-
-
-<div class="producto">
-<h3>La Receta de la Felicidad y el Respeto</h3>
-<p>Texto funcional</p>
-<div class="precio">$5.000</div>
-<a href="#">Ver taller</a>
 </div>
 
 
@@ -409,50 +944,47 @@ estimular lenguaje, articulación y conciencia fonológica.
 </section>
 
 
-<section class="beneficios">
 
-<div class="beneficio">
-<div class="corazon">♥</div>
-Material creado por fonoaudióloga
+<div class="frase-final">
+
+<h2>
+Porque todas las voces <span>importan ♡</span>
+</h2>
+
+<p>
+Comunicar también es incluir.
+</p>
+
 </div>
 
-<div class="beneficio">
-<div class="corazon">✓</div>
-Recursos digitales PDF y PPT
-</div>
-
-<div class="beneficio">
-<div class="corazon">★</div>
-Diseños atractivos y funcionales
-</div>
-
-<div class="beneficio">
-<div class="corazon">♡</div>
-Ideal para aula común, aula de recursos y terapias
-</div>
-
-</section>
 
 
 <footer id="contacto">
 
-<h3>Fonita al Rescate ♡</h3>
+<h2>
+Fonita al Rescate ♡
+</h2>
 
 <p>
 Material didáctico para comunicar grandes logros
 </p>
 
-<br>
+<a
+class="instagram"
+href="https://www.instagram.com/fonitaalrescate/"
+target="_blank">
+♡ Sígueme en Instagram
+</a>
 
-<p>
-Instagram: @fonitaalrescate
+<p style="margin-top:20px;">
+@fonitaalrescate
 </p>
 
-<br>
+</footer>
 
-<p>
-♡ Comunicar también es incluir ♡
-</p>
+
+</body>
+</html>
 
 </footer>
 
