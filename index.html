@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Fonita al Rescate | Material Didáctico</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #302060;
+    }
+
+    header {
+      padding: 25px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 32px;
+      font-weight: bold;
+      color: #713bd5;
+    }
+
+    .logo span {
+      color: #ef2992;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #302060;
+      margin: 10px;
+      font-weight: bold;
+    }
+
+    .hero {
+      min-height: 480px;
+      padding: 70px 8%;
+      background: linear-gradient(135deg,#fff8fc,#f4efff,#effcfd);
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 64px;
+      line-height: 1.05;
+      color: #6735cc;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: #ed2792;
+    }
+
+    .hero p {
+      font-size: 20px;
+      line-height: 1.6;
+      max-width: 620px;
+    }
+
+    .boton {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 16px 32px;
+      background: #ed2792;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 6%;
+    }
+
+    h2 {
+      text-align: center;
+      color: #6735cc;
+      font-size: 38px;
+      margin-bottom: 40px;
+    }
+
+    .categorias {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .categoria {
+      padding: 30px 15px;
+      text-align: center;
+      background: #faf6ff;
+      border-radius: 22px;
+      font-weight: bold;
+    }
+
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap: 30px;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .producto {
+      background: white;
+      border: 2px solid #eee5ff;
+      border-radius: 25px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(91,52,170,.10);
+    }
+
+    .producto h3 {
+      font-size: 22px;
+      color: #5224a8;
+      margin-bottom: 12px;
+    }
+
+    .precio {
+      color: #009faf;
+      font-size: 30px;
+      font-weight: bold;
+      margin: 15px;
+    }
+
+    .producto p {
+      line-height: 1.5;
+    }
+
+    .producto a {
+      display: inline-block;
+      padding: 12px 25px;
+      margin-top: 15px;
+      border-radius: 25px;
+      background: #ed2792;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .beneficios {
+      background: #f5f0ff;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 45px;
+      text-align: center;
+    }
+
+    .beneficio {
+      max-width: 200px;
+      font-weight: bold;
+    }
+
+    .corazon {
+      font-size: 35px;
+      color: #ed2792;
+    }
+
+    footer {
+      background: #7041cf;
+      color: white;
+      text-align: center;
+      padding: 45px 20px;
+    }
+
+    footer h3 {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    @media(max-width:700px) {
+      .hero h1 {
+        font-size: 44px;
+      }
+
+      nav {
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">
+    Fonita <span>al Rescate</span>
+  </div>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#categorias">Categorías</a>
+    <a href="#materiales">Materiales</a>
+    <a href="#packs">Packs</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+</header>
+
+
+<section class="hero" id="inicio">
+
+  <div class="hero-content">
+
+    <h1>
+      Material didáctico<br>
+      <span>con propósito</span>
+    </h1>
+
+    <p>
+      Recursos creativos, funcionales y hechos con mucho cariño
+      para apoyar el desarrollo del lenguaje, la comunicación,
+      la lectura, la escritura y el aprendizaje.
+    </p>
+
+    <a class="boton" href="#materiales">
+      Explora la tienda ♥
+    </a>
+
+  </div>
+
+</section>
+
+
+<section id="categorias">
+
+<h2>Explora por categoría ♡</h2>
+
+<div class="categorias">
+
+  <div class="categoria">👄<br><br>Fonemas y dífonos</div>
+
+  <div class="categoria">📖<br><br>Comprensión lectora</div>
+
+  <div class="categoria">🧠<br><br>Conciencia fonológica</div>
+
+  <div class="categoria">✏️<br><br>Lectoescritura</div>
+
+  <div class="categoria">🧩<br><br>Talleres y actividades</div>
+
+  <div class="categoria">⭐<br><br>Packs y promociones</div>
+
+</div>
+
+</section>
+
+
+<section id="materiales">
+
+<h2>Materiales destacados ♡</h2>
+
+<div class="productos">
+
+
+<div class="producto">
+
+<h3>Pack Comprensión Lectora</h3>
+
+<p>
+9 talleres completos, proyectables e imprimibles.
+</p>
+
+<div class="precio">$24.990</div>
+
+<a href="#">Ver material</a>
+
+</div>
+
+
+<div class="producto">
+
+<h3>Pack 13 Dífonos Consonánticos</h3>
+
+<p>
+Más de 260 diapositivas para trabajar,
+reforzar y automatizar cada sonido.
+</p>
+
+<div class="precio">$29.990</div>
+
+<a href="#">Ver material</a>
+
+</div>
+
+
+<div class="producto">
+
+<h3>Talleres de los Fonemas</h3>
+
+<p>
+Material proyectable e imprimible para
+estimular lenguaje, articulación y conciencia fonológica.
+</p>
+
+<div class="precio">Desde $6.000</div>
+
+<a href="#">Ver talleres</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2>Talleres de Comprensión Lectora ♡</h2>
+
+<div class="productos">
+
+
+<div class="producto">
+<h3>Pedrito y el Lobo</h3>
+<p>Fábula</p>
+<div class="precio">$5.000</div>
+<a href="#">Ver taller</a>
+</div>
+
+
+<div class="producto">
+<h3>Pepa aprende a compartir</h3>
+<p>Cuento</p>
+<div class="precio">$5.000</div>
+<a href="#">Ver taller</a>
+</div>
+
+
+<div class="producto">
+<h3>Titín el Calcetín</h3>
+<p>Cuento</p>
+<div class="precio">$5.000</div>
+<a href="#">Ver taller</a>
+</div>
+
+
+<div class="producto">
+<h3>Lolo aprende “Gracias” y “Por favor”</h3>
+<p>Cuento</p>
+<div class="precio">$5.000</div>
+<a href="#">Ver taller</a>
+</div>
+
+
+<div class="producto">
+<h3>Esperanza</h3>
+<p>Cuento</p>
+<div class="precio">$5.000</div>
+<a href="#">Ver taller</a>
+</div>
+
+
+<div class="producto">
+<h3>Tren del Cielo</h3>
+<p>Canción</p>
+<div class="precio">$5.000</div>
+<a href="#">Ver taller</a>
+</div>
+
+
+<div class="producto">
+<h3>Mi Cometa de Colores</h3>
+<p>Poema</p>
+<div class="precio">$5.000</div>
+<a href="#">Ver taller</a>
+</div>
+
+
+<div class="producto">
+<h3>La Leyenda del Copihue</h3>
+<p>Leyenda</p>
+<div class="precio">$5.000</div>
+<a href="#">Ver taller</a>
+</div>
+
+
+<div class="producto">
+<h3>La Receta de la Felicidad y el Respeto</h3>
+<p>Texto funcional</p>
+<div class="precio">$5.000</div>
+<a href="#">Ver taller</a>
+</div>
+
+
+</div>
+
+</section>
+
+
+<section class="beneficios">
+
+<div class="beneficio">
+<div class="corazon">♥</div>
+Material creado por fonoaudióloga
+</div>
+
+<div class="beneficio">
+<div class="corazon">✓</div>
+Recursos digitales PDF y PPT
+</div>
+
+<div class="beneficio">
+<div class="corazon">★</div>
+Diseños atractivos y funcionales
+</div>
+
+<div class="beneficio">
+<div class="corazon">♡</div>
+Ideal para aula común, aula de recursos y terapias
+</div>
+
+</section>
+
+
+<footer id="contacto">
+
+<h3>Fonita al Rescate ♡</h3>
+
+<p>
+Material didáctico para comunicar grandes logros
+</p>
+
+<br>
+
+<p>
+Instagram: @fonitaalrescate
+</p>
+
+<br>
+
+<p>
+♡ Comunicar también es incluir ♡
+</p>
+
+</footer>
+
+</body>
+</html>
