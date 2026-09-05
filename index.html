@@ -296,32 +296,40 @@ section{
   max-width:1150px;
   margin:auto;
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:1fr;
   gap:28px;
 }
 
 .producto{
-  background:white;
-  border-radius:28px;
-  padding:28px;
-  text-align:center;
-  border:2px solid #eee7ff;
-  box-shadow:0 10px 28px rgba(68,32,125,.09);
-}
+    background:white;
+    border-radius:28px;
+    padding:28px;
+    border:2px solid #eee7ff;
+    box-shadow:0 10px 28px rgba(68,32,125,.09);
 
+    display:grid;
+    grid-template-columns:420px 1fr;
+    gap:36px;
+    align-items:center;
+
+    text-align:left;
+}
 .producto-icono{
-  height:150px;
-  border-radius:22px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:70px;
-  margin-bottom:22px;
+    height:320px;
+    border-radius:22px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:70px;
+    margin-bottom:0;
+    overflow:hidden;
 }
 .producto-icono.portada-comprension{
-    height:360px;
-    background:white;
-  }
+    height:520px;
+    background:var(--rosa-claro);
+    padding:12px;
+    box-sizing:border-box;
+}
 .producto:nth-child(1) .producto-icono{
   background:var(--rosa-claro);
 }
@@ -745,7 +753,7 @@ Materiales <span>destacados ♡</span>
 <div class="producto-icono portada-comprension">
   <img src="./WhatsApp%20Image%202026-08-31%20at%2015.02.36.jpeg"
        alt="Pack Comprensión Lectora"
-       style="width:100%; height:auto; max-height:420px; object-fit:contain; border-radius:22px;">
+       style="width:100%; height:100%; object-fit:contain; border-radius:18px;">
 </div>
 
 <h3>
