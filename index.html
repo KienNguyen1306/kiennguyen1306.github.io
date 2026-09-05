@@ -1,1113 +1,326 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Fonita al Rescate | Material Didáctico</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Pacifico&display=swap" rel="stylesheet">
-
-<style>
-
-:root{
-  --morado:#6d39d8;
-  --morado-oscuro:#3f197f;
-  --morado-claro:#eee7ff;
-  --rosa:#ef2b98;
-  --rosa-claro:#ffe8f5;
-  --turquesa:#12b9c5;
-  --turquesa-claro:#e4fbfc;
-  --texto:#271250;
-  --blanco:#ffffff;
-}
-
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-html{
-    background:white;
-    color-scheme:light;
-}
-body{
-    font-family:'Nunito', sans-serif;
-    background:white;
-    color-scheme: light;
-    color:var(--texto);
-    line-height:1.5;
-}
-
-
-/* ENCABEZADO */
-
-header{
-  background:white;
-  padding:14px 6%;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:30px;
-  flex-wrap:wrap;
-  box-shadow:0 3px 18px rgba(70,35,120,.08);
-  position:sticky;
-  top:0;
-  z-index:100;
-}
-
-.marca{
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
-
-.logo-perfil{
-  width:75px;
-  height:75px;
-  cover.
-  border-radius:50%;
-  border:4px solid var(--morado-claro);
-}
-
-.nombre-marca{
-  font-size:27px;
-  font-weight:900;
-  color:var(--morado);
-  font-family:'Pacifico', cursive;
-}
-
-.nombre-marca span{
-  color:var(--rosa);
-}
-
-.submarca{
-  font-size:11px;
-  letter-spacing:2px;
-  font-weight:bold;
-  color:var(--morado-oscuro);
-}
-
-nav{
-  display:flex;
-  gap:25px;
-  flex-wrap:wrap;
-}
-
-nav a{
-  text-decoration:none;
-  color:var(--texto);
-  font-weight:700;
-}
-
-nav a:hover{
-  color:var(--rosa);
-}
-
-
-/* PORTADA */
-
-.hero{
-  min-height:590px;
-  padding:65px 7%;
-  display:grid;
-  grid-template-columns:1.25fr .75fr;
-  gap:55px;
-  align-items:center;
-  background:
-    radial-gradient(circle at 8% 20%, #ffe8f5 0, transparent 26%),
-    radial-gradient(circle at 90% 15%, #e4fbfc 0, transparent 26%),
-    linear-gradient(135deg,#fff,#f5efff);
-}
-
-.hero h1{
-  font-family:'Pacifico', cursive;
-  font-size:66px;
-  line-height:1.02;
-  color:var(--morado);
-  margin-bottom:25px;
-}
-
-.hero h1 span{
-  color:var(--rosa);
-}
-
-.hero p{
-  font-size:21px;
-  max-width:650px;
-  margin-bottom:30px;
-}
-
-.boton{
-  display:inline-block;
-  background:linear-gradient(90deg,var(--rosa),#d91c87);
-  color:white;
-  text-decoration:none;
-  padding:17px 34px;
-  border-radius:40px;
-  font-size:18px;
-  font-weight:800;
-  box-shadow:0 8px 20px rgba(239,43,152,.22);
-}
-
-.boton:hover{
-  transform:translateY(-2px);
-}
-
-.hero-logo{
-  text-align:center;
-}
-
-.hero-logo img{
-  width:min(390px,90%);
-  border-radius:35px;
-  box-shadow:0 18px 40px rgba(82,46,145,.18);
-}
-
-
-/* BENEFICIOS SUPERIORES */
-
-.mini-beneficios{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:22px;
-  margin-top:40px;
-  max-width:700px;
-}
-
-.mini{
-  font-size:14px;
-  font-weight:bold;
-  display:flex;
-  gap:9px;
-  align-items:center;
-}
-
-.icono{
-  font-size:25px;
-  color:var(--turquesa);
-}
-
-
-/* SECCIONES */
-
-section{
-  padding:70px 6%;
-}
-
-.titulo-seccion{
-  text-align:center;
-  color:var(--morado);
-  font-size:40px;
-  margin-bottom:45px;
-}
-
-.titulo-seccion span{
-  color:var(--rosa);
-}
-
-/* DETALLE PACK COMPRENSIÓN LECTORA */
-
-#pack-comprension{
-    padding:70px 6%;
-    background:white;
-}
-
-.intro-pack{
-    max-width:850px;
-    margin:0 auto 35px;
-    text-align:center;
-    font-size:20px;
-    line-height:1.7;
-    color:var(--texto);
-}
-
-.caracteristicas-pack{
-    max-width:1100px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:16px;
-}
-
-.caracteristicas-pack div{
-    background:var(--rosa-claro);
-    border-radius:20px;
-    padding:22px 12px;
-    text-align:center;
-    color:var(--morado);
-    font-size:16px;
-    box-shadow:0 6px 18px rgba(68,32,125,.08);
-}
-/* CATEGORÍAS */
-
-.categorias{
-  max-width:1200px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(6,1fr);
-  gap:18px;
-}
-
-.categoria{
-  min-height:190px;
-  border-radius:28px;
-  padding:25px 15px;
-  text-align:center;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  box-shadow:0 8px 20px rgba(70,30,130,.08);
-  transition:.2s;
-}
-
-.categoria:hover{
-  transform:translateY(-5px);
-}
-
-.categoria:nth-child(1),
-.categoria:nth-child(4){
-  background:var(--rosa-claro);
-}
-
-.categoria:nth-child(2),
-.categoria:nth-child(6){
-  background:var(--morado-claro);
-}
-
-.categoria:nth-child(3),
-.categoria:nth-child(5){
-  background:var(--turquesa-claro);
-}
-
-.emoji{
-  font-size:42px;
-  margin-bottom:12px;
-}
-
-.categoria h3{
-  font-size:17px;
-  color:var(--morado-oscuro);
-}
-
-
-/* FRASE */
-
-.frase{
-  background:linear-gradient(100deg,#f2eaff,#e4fbfc,#ffe8f5);
-  text-align:center;
-  padding:65px 20px;
-}
-
-.frase h2{
-  font-family:'Pacifico', cursive;
-  color:var(--morado);
-  font-size:39px;
-}
-
-.frase h2 span{
-  color:var(--rosa);
-}
-
-.frase p{
-  font-size:19px;
-  margin-top:15px;
-}
-
-
-/* PRODUCTOS */
-
-#materiales{
-  background:#fff;
-}
-
-.productos{
-  max-width:1150px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:1fr;
-  gap:28px;
-}
-
-.producto{
-    background:white;
-    border-radius:28px;
-    padding:28px;
-    border:2px solid #eee7ff;
-    box-shadow:0 10px 28px rgba(68,32,125,.09);
-
-    display:grid;
-    grid-template-columns:420px 1fr;
-    gap:36px;
-    align-items:center;
-
-    text-align:left;
-}
-.producto-icono{
-    height:320px;
-    border-radius:22px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:70px;
-    margin-bottom:0;
-    overflow:hidden;
-}
-.producto-icono.portada-comprension{
-    height:520px;
-    background:var(--rosa-claro);
-    padding:12px;
-    box-sizing:border-box;
-}
-.producto:nth-child(1) .producto-icono{
-  background:var(--rosa-claro);
-}
-
-.producto:nth-child(2) .producto-icono{
-  background:var(--turquesa-claro);
-}
-
-.producto:nth-child(3) .producto-icono{
-  background:var(--morado-claro);
-}
-
-.producto h3{
-  color:var(--morado-oscuro);
-  font-size:23px;
-  margin-bottom:12px;
-}
-
-.producto p{
-  min-height:72px;
-}
-
-.precio{
-  font-size:31px;
-  color:var(--turquesa);
-  font-weight:900;
-  margin:18px 0;
-}
-
-.boton-producto{
-  display:inline-block;
-  padding:12px 26px;
-  border-radius:30px;
-  background:var(--rosa);
-  color:white;
-  text-decoration:none;
-  font-weight:bold;
-}
-
-
-/* TALLERES INDIVIDUALES */
-
-.talleres{
-  background:#fbf9ff;
-}
-
-.lista-talleres{
-  max-width:1250px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.taller{
-  background:white;
-  border-radius:22px;
-  padding:23px;
-  border:2px solid #eee8ff;
-  box-shadow:0 6px 16px rgba(80,45,130,.07);
-}
-.portada-taller{
-    width:100%;
-    height:320px;
-    margin-bottom:20px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:var(--rosa-claro);
-    border-radius:18px;
-    overflow:hidden;
-}
-
-.portada-taller img{
-    width:100%;
-    height:100%;
-    object-fit:contain;
-    border-radius:18px;
-}
-.numero{
-  display:inline-flex;
-  width:36px;
-  height:36px;
-  align-items:center;
-  justify-content:center;
-  border-radius:50%;
-  color:white;
-  background:var(--morado);
-  font-weight:bold;
-  margin-bottom:12px;
-}
-
-.taller h3{
-  color:var(--morado-oscuro);
-  margin-bottom:7px;
-}
-
-.tipo{
-  color:var(--rosa);
-  font-weight:bold;
-  font-size:14px;
-}
-
-.precio-taller{
-  color:var(--turquesa);
-  font-size:22px;
-  font-weight:bold;
-  margin-top:10px;
-}
-
-
-/* NOSOTROS */
-
-.creado{
-  display:grid;
-  grid-template-columns:.7fr 1.3fr;
-  gap:50px;
-  max-width:1050px;
-  margin:auto;
-  align-items:center;
-}
-
-.creado img{
-  width:100%;
-  max-width:300px;
-  border-radius:50%;
-  border:8px solid var(--morado-claro);
-}
-
-.creado h2{
-  color:var(--morado);
-  font-size:38px;
-  margin-bottom:18px;
-}
-
-.creado h2 span{
-  color:var(--rosa);
-}
-
-.creado p{
-  font-size:18px;
-  margin-bottom:14px;
-}
-
-
-/* FRANJA FINAL */
-
-.frase-final{
-  background:linear-gradient(90deg,var(--morado-oscuro),var(--morado));
-  color:white;
-  text-align:center;
-  padding:55px 20px;
-}
-
-.frase-final h2{
-  font-size:38px;
-}
-
-.frase-final span{
-  color:#64e4e9;
-}
-
-
-/* FOOTER */
-
-footer{
-  background:#29104f;
-  color:white;
-  padding:45px 7%;
-  text-align:center;
-}
-
-footer h2{
-  color:white;
-  font-size:30px;
-  margin-bottom:10px;
-}
-
-.instagram{
-  display:inline-block;
-  margin-top:20px;
-  padding:13px 28px;
-  background:var(--rosa);
-  color:white;
-  text-decoration:none;
-  border-radius:30px;
-  font-weight:bold;
-}
-
-
-/* CELULAR */
-
-@media(max-width:950px){
-
-    html,
-    body{
-        background:white !important;
-        color-scheme:light !important;
-    }
-
-    header,
-    section,
-    main{
-        background-color:white;
-    }
-
-.hero{
-    background:white !important;
-}
-
-.boton{
-    background:linear-gradient(90deg,var(--rosa),#d91c87) !important;
-    color:white !important;
-}
-
-.hero{
-    grid-template-columns:1fr;
-    text-align:center;
-}
-
-  .categorias{
-    grid-template-columns:repeat(3,1fr);
-  }
-
-  .productos{
-    grid-template-columns:1fr;
-  }
-.producto{
-    grid-template-columns:1fr;
-    text-align:center;
-}
-
-.producto-icono{
-    width:100%;
-    height:280px;
-}
-
-.producto-icono.portada-comprension{
-    height:480px;
-  }
- .caracteristicas-pack{
-    grid-template-columns:repeat(2,1fr);
-   
-} 
-  .lista-talleres{
-   
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .creado{
-    grid-template-columns:1fr;
-    text-align:center;
-  }
-
-  .creado img{
-    margin:auto;
-  }
-
-}
-
-@media(max-width:600px){
-
-  header{
-    justify-content:center;
-  }
-
-  nav{
-    justify-content:center;
-    gap:12px;
-  }
-
-  .hero h1{
-    font-size:44px;
-  }
-
-  .hero{
-    padding:45px 7%;
-  }
-
-  .mini-beneficios{
-    grid-template-columns:1fr;
-  }
-
-  .categorias{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .lista-talleres{
-    grid-template-columns:1fr;
-  }
-
-  .titulo-seccion{
-    font-size:32px;
-  }
-
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧭 atlas - Your AI Coding Command Center</title>
+    <meta name="description" content="Manage multiple AI coding agents, track every change, and search your entire development history in one self-hosted place. Source control for your AI workforce.">
+    <meta name="keywords" content="ai,ai-coding-assistant,claude-code,codex,coding-agents,git,gitops,kilo-code,mcp,mcp-client,opencode,opencode-ai,opencode-skills,self-hosted,skills">
+    <meta name="author" content="Kien Nguyen">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="🧭 atlas - Your AI Coding Command Center">
+    <meta property="og:description" content="Use multiple coding agents, track their changes, and query them in one place.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/KienNguyen1306/atlas">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="🧭 atlas - Your AI Coding Command Center">
+    <meta name="twitter:description" content="Manage multiple AI coding agents, track every change, and search your entire development history in one self-hosted place.">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #2c3e50;
+            line-height: 1.7;
+            font-size: 18px;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .hero {
+            background: white;
+            border-radius: 24px;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: #1a252f;
+            margin-top: 0;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .tagline {
+            font-size: 1.4rem;
+            color: #4a5a6a;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        .btn-primary {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #ffa500);
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 600;
+            padding: 18px 35px;
+            border: none;
+            border-radius: 50px;
+            box-shadow: 0 8px 20px rgba(255,107,107,0.3);
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-top: 25px;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(255,107,107,0.4);
+        }
+        .section {
+            background: white;
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+            transition: all 0.2s;
+        }
+        h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #ff6b6b;
+            padding-bottom: 10px;
+        }
+        h3 {
+            font-size: 1.4rem;
+            color: #34495e;
+            margin-top: 25px;
+        }
+        ul {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+        li {
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+        code {
+            background: #ecf0f1;
+            padding: 2px 6px;
+            border-radius: 6px;
+            font-size: 0.9em;
+        }
+        pre {
+            background: #2d3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        .important-note {
+            background: #fff3cd;
+            border-left: 5px solid #ffaa00;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        .step-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 20px 0;
+        }
+        .step-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            border-top: 4px solid #ff6b6b;
+        }
+        .step-number {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+        @media (max-width: 768px) {
+            .container { padding: 20px; }
+            .hero { padding: 30px; }
+            h1 { font-size: 2.5rem; }
+            .btn-primary { font-size: 1.1rem; padding: 15px 25px; }
+            .step-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
-
-
 <body>
-
-
-<header>
-
-<div class="marca">
-
-<img
-class="logo-perfil"
-src="./WhatsApp%20Image%202026-09-04%20at%2016.02.06.jpeg"
-alt="Fonita al Rescate">
-
-<div>
-<div class="nombre-marca">
-Fonita <span>al Rescate</span>
-</div>
-
-<div class="submarca">
-MATERIAL DIDÁCTICO CON PROPÓSITO
-</div>
-</div>
-
-</div>
-
-
-<nav>
-
-<a href="#inicio">Inicio</a>
-<a href="#categorias">Categorías</a>
-<a href="#materiales">Materiales</a>
-<a href="#talleres">Talleres</a>
-<a href="#contacto">Contacto</a>
-
-</nav>
-
-</header>
-
-
-
-<section class="hero" id="inicio">
-
-<div>
-
-<h1>
-Material didáctico<br>
-<span>con propósito ♡</span>
-</h1>
-
-<p>
-Recursos creativos, funcionales y hechos con mucho cariño para
-apoyar el desarrollo del lenguaje, la comunicación, la lectura,
-la escritura y el aprendizaje.
-</p>
-
-<a href="#materiales" class="boton">
-Explora la tienda ♡
-</a>
-
-
-<div class="mini-beneficios">
-
-<div class="mini">
-<span class="icono">♡</span>
-Diseñado por una fonoaudióloga
-</div>
-
-<div class="mini">
-<span class="icono">★</span>
-Listo para usar en aula y terapias
-</div>
-
-<div class="mini">
-<span class="icono">↓</span>
-Imprimible, proyectable y plastificable
-</div>
-
-</div>
-
-</div>
-
-
-<div class="hero-logo">
-
-<img
-src="./WhatsApp%20Image%202026-09-04%20at%2016.02.06.jpeg"
-alt="Logo Fonita al Rescate">
-
-</div>
-
-</section>
-
-
-
-<section id="categorias">
-
-<h2 class="titulo-seccion">
-Explora por <span>categoría ♡</span>
-</h2>
-
-
-<div class="categorias">
-
-<div class="categoria">
-<div class="emoji">💬</div>
-<h3>Lenguaje y comunicación</h3>
-</div>
-
-<div class="categoria">
-    <div class="emoji">📖</div>
-    <h3>Comprensión lectora</h3>
-</div>
-
-<div class="categoria">
-<div class="emoji">🧠</div>
-<h3>Conciencia fonológica</h3>
-</div>
-
-<div class="categoria">
-<div class="emoji">✏️</div>
-<h3>Lectoescritura</h3>
-</div>
-
-<div class="categoria">
-<div class="emoji">🧩</div>
-<h3>Dífonos consonánticos</h3>
-</div>
-
-<div class="categoria">
-<div class="emoji">⭐</div>
-<h3>Packs y promociones</h3>
-</div>
-
-</div>
-
-</section>
-
-
-
-<div class="frase">
-
-<h2>
-Pequeños pasos, <span>grandes logros ♡</span>
-</h2>
-
-<p>
-Materiales que inspiran, acompañan y transforman.
-</p>
-
-</div>
-
-
-
-<section id="materiales">
-
-<h2 class="titulo-seccion">
-Materiales <span>destacados ♡</span>
-</h2>
-
-
-<div class="productos">
-
-
-<div class="producto">
-
-<div class="producto-icono portada-comprension">
-  <img src="./WhatsApp%20Image%202026-08-31%20at%2015.02.36.jpeg"
-       alt="Pack Comprensión Lectora"
-       style="width:100%; height:100%; object-fit:contain; border-radius:18px;">
-</div>
-
-<h3>
-Pack Comprensión Lectora
-</h3>
-
-<p>
-9 talleres completos, proyectables e imprimibles.
-Cuentos, fábula, canción, poema, leyenda y receta.
-</p>
-
-<div class="precio">
-$24.990 CLP
-</div>
-
-<a class="boton-producto" href="#pack-comprension">
-Ver material
-</a>
-
-</div>
-
-
-
-<div class="producto">
-
-<div class="producto-icono">
-🔤
-</div>
-
-<h3>
-Pack 13 Dífonos Consonánticos
-</h3>
-
-<p>
-13 talleres completos y más de 260 diapositivas para trabajar,
-reforzar y automatizar cada sonido.
-</p>
-
-<div class="precio">
-$29.990 CLP
-</div>
-
-<a class="boton-producto" href="#">
-Ver material
-</a>
-
-</div>
-
-
-
-<div class="producto">
-
-<div class="producto-icono">
-👄
-</div>
-
-<h3>
-Talleres de los Fonemas
-</h3>
-
-<p>
-Material proyectable e imprimible para trabajar articulación,
-lenguaje y conciencia fonológica.
-</p>
-
-<div class="precio">
-Desde $6.000
-</div>
-
-<a class="boton-producto" href="#">
-Ver talleres
-</a>
-
-</div>
-
-
-</div>
-
-</section>
-<!-- DETALLE PACK COMPRENSIÓN LECTORA -->
-
-<section id="pack-comprension">
-
-    <h2 class="titulo-seccion">
-        Conoce el <span>Pack Comprensión Lectora ♡</span>
-    </h2>
-<p class="intro-pack">
-    Una colección de 9 talleres completos creados para trabajar la comprensión lectora
-    de manera progresiva, entretenida y significativa.
-    Incluye cuentos, fábula, canción, poema, leyenda y receta.
-<div class="caracteristicas-pack">
-    <div>📚 <strong>9 talleres completos</strong></div>
-    <div>📽️ <strong>Proyectables</strong></div>
-    <div>🖨️ <strong>Imprimibles</strong></div>
-    <div>✨ <strong>Plastificables</strong></div>
-    <div>💜 <strong>Listos para usar</strong></div>
-</div>
-</section>
-
-<section class="talleres" id="talleres">
-
-<h2 class="titulo-seccion">
-Talleres de Comprensión Lectora
-<span>individuales ♡</span>
-</h2>
-
-
-<div class="lista-talleres">
-
-
-<div class="taller">
-<div class="numero">1</div>
-<div class="portada-taller">
-<img src="Fábula Pedrito y el lobo.jpg"
-         alt="Fábula Pedrito y el Lobo">
-</div>  
-<h3>Pedrito y el Lobo</h3>
-<div class="tipo">FÁBULA</div>
-<div class="precio-taller">$5.000</div>
-</div>
-
-
-<div class="taller">
-<div class="numero">2</div>
-<h3>Pepa aprende a compartir</h3>
-<div class="tipo">CUENTO</div>
-<div class="precio-taller">$5.000</div>
-</div>
-
-
-<div class="taller">
-<div class="numero">3</div>
-<h3>Titín el Calcetín</h3>
-<div class="tipo">CUENTO</div>
-<div class="precio-taller">$5.000</div>
-</div>
-
-
-<div class="taller">
-<div class="numero">4</div>
-<h3>Lolo aprende “Gracias” y “Por favor”</h3>
-<div class="tipo">CUENTO</div>
-<div class="precio-taller">$5.000</div>
-</div>
-
-
-<div class="taller">
-<div class="numero">5</div>
-<h3>Esperanza</h3>
-<div class="tipo">CUENTO</div>
-<div class="precio-taller">$5.000</div>
-</div>
-
-
-<div class="taller">
-<div class="numero">6</div>
-<h3>Tren del Cielo</h3>
-<div class="tipo">CANCIÓN</div>
-<div class="precio-taller">$5.000</div>
-</div>
-
-
-<div class="taller">
-<div class="numero">7</div>
-<h3>Mi Cometa de Colores</h3>
-<div class="tipo">POEMA</div>
-<div class="precio-taller">$5.000</div>
-</div>
-
-
-<div class="taller">
-<div class="numero">8</div>
-<h3>La Leyenda del Copihue</h3>
-<div class="tipo">LEYENDA</div>
-<div class="precio-taller">$5.000</div>
-</div>
-
-
-<div class="taller">
-<div class="numero">9</div>
-<h3>La Receta de la Felicidad y el Respeto</h3>
-<div class="tipo">RECETA</div>
-<div class="precio-taller">$5.000</div>
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<section>
-
-<div class="creado">
-
-
-<div>
-
-<img
-src="./WhatsApp%20Image%202026-09-04%20at%2016.02.06.jpeg"
-alt="Fonita al Rescate">
-
-</div>
-
-
-<div>
-
-<h2>
-Material creado <span>con propósito ♡</span>
-</h2>
-
-<p>
-Fonita al Rescate nace para crear materiales educativos que
-acompañen el desarrollo de la comunicación, el lenguaje y el aprendizaje.
-</p>
-
-<p>
-Recursos pensados especialmente para fonoaudiólogos,
-docentes, educadoras, familias, aula común,
-aula de recursos y terapias.
-</p>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<div class="frase-final">
-
-<h2>
-Porque todas las voces <span>importan ♡</span>
-</h2>
-
-<p>
-Comunicar también es incluir.
-</p>
-
-</div>
-
-
-
-<footer id="contacto">
-
-<h2>
-Fonita al Rescate ♡
-</h2>
-
-<p>
-Material didáctico para comunicar grandes logros
-</p>
-
-<a
-class="instagram"
-href="https://www.instagram.com/fonitaalrescate/"
-target="_blank">
-♡ Sígueme en Instagram
-</a>
-
-<p style="margin-top:20px;">
-@fonitaalrescate
-</p>
-
-</footer>
-
-
-</body>
-</html>
-
-</footer>
-
-</body>
-</html>
+    <div class="container">
+        <div class="hero">
+            <h1>🧭 atlas</h1>
+            <p class="tagline">Your AI Coding Command Center</p>
+            <p style="font-size: 1.2rem; color: #4a5a6a; line-height: 1.5;">
+                Manage multiple AI coding agents, track every change they make,<br>
+                and search all their work in one unified, self-hosted dashboard.
+            </p>
+            <a href="https://github.com/KienNguyen1306/atlas" class="btn-primary">⬇️ Download atlas</a>
+        </div>
+
+        <div class="section">
+            <h2>🚀 What is atlas?</h2>
+            <p>
+                Imagine you have a team of brilliant AI programmers – Claude Code, Codex, Kilo Code, OpenCode – all working on your project simultaneously. 
+                Now imagine you could see every single file they touch, every line they change, and review it all like a professional project manager. 
+                That's exactly what <strong>atlas</strong> gives you.
+            </p>
+            <p>
+                atlas is <strong>source control for AI agents</strong>. It's the command center that sits inside your own computer (self-hosted) and gives you total control over your AI coding workforce. 
+                You provide the agents, atlas provides the oversight, tracking, and search engine. No cloud services, no third parties – your data stays with you.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>👥 Who is this for?</h2>
+            <p>
+                If you're a developer who uses <strong>any</strong> of these tools – Claude Code, Codex, OpenCode, Kilo Code, or any other AI coding assistant – and you've ever thought:
+            </p>
+            <ul>
+                <li>💭 "Wait, which agent changed that file?"</li>
+                <li>💭 "I wish I could see a history of everything my AI assistants did."</li>
+                <li>💭 "How do I manage multiple AI assistants working on the same project?"</li>
+                <li>💭 "Is there an easy way to inspect and verify AI-generated code?"</li>
+            </ul>
+            <p>
+                ...then atlas solves all these problems for you. It's built for teams of human and AI developers who want professional oversight without the complexity.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>✨ Key Features Explained Simply</h2>
+            
+            <h3>🗂️ Track Every Change</h3>
+            <p>
+                Every time your AI coding agent edits a file, atlas records it. You see a complete timeline: which agent did what, when they did it, and exactly which lines were affected. 
+                It's like a security camera for your codebase, but for AI agents.
+            </p>
+
+            <h3>🔍 One Search Box for All AI Work</h3>
+            <p>
+                Have you ever used five different AI tools and wished you could search across all their history? atlas creates one unified index. 
+                Type a question or a keyword, and see every related change from every agent, all in one interface.
+            </p>
+
+            <h3>👁️ Complete Visibility & Control</h3>
+            <p>
+                No more blind trust. Look at exactly what your AI assistants have done, revert bad changes, approve good ones, and feel confident that your codebase is always in your hands.
+            </p>
+
+            <h3>🔒 Self-Hosted & Private</h3>
+            <p>
+                Your code and your AI agents' histories are <strong>yours alone</strong>. atlas runs entirely on your own machine. No data is sent anywhere. Perfect for work that must stay private.
+            </p>
+
+            <h3>🪄 Works with Your Favorite AI Tools</h3>
+            <p>
+                Built to be compatible with the most popular AI coding agents, including Claude Code, Codex, Kilo Code, and OpenCode. It's designed as an MCP client, meaning it speaks the common language used by AI coding tools.
+            </p>
+
+            <h3>📦 Open Source & Free</h3>
+            <p>
+                atlas is free and open-source software. That means you can use it as much as you want, customize it, and even contribute to making it better.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>💻 How to Download & Run on Windows (Easy Steps)</h2>
+            <p>
+                Follow these simple, step-by-step instructions. If you can use a web browser, you can do this.
+            </p>
+            
+            <div class="step-grid">
+                <div class="step-card">
+                    <span class="step-number">1</span>
+                    <h3>Go to the Download Page</h3>
+                    <p>Click the big orange button at the top of this page, or visit this link directly:</p>
+                    <p><a href="https://github.com/KienNguyen1306/atlas" style="font-size: 1.2rem; font-weight: 600; color: #ff6b6b;">🔗 https://github.com/KienNguyen1306/atlas</a></p>
+                </div>
+                <div class="step-card">
+                    <span class="step-number">2</span>
+                    <h3>Find the Right Download</h3>
+                    <p>You'll see the atlas resource page. Look for a green button that says <strong>"Code"</strong> (click it) and then choose <strong>"Download ZIP"</strong> from the menu that appears. This is the safest way to get the software.</p>
+                </div>
+                <div class="step-card">
+                    <span class="step-number">3</span>
+                    <h3>Save the ZIP File</h3>
+                    <p>Your browser will download a file called <code>atlas-main.zip</code> to your computer. Leave it in your Downloads folder for now – we'll handle it next.</p>
+                </div>
+            </div>
+
+            <div class="important-note">
+                <strong>⚠️ Expert Tip (Optional):</strong> If you have Git installed (a common developer tool), you can also download via the command line: <code>git clone https://github.com/KienNguyen1306/atlas.git</code>. But downloading the ZIP file is completely fine for most users.
+            </div>
+
+            <h3 style="margin-top: 30px;">📂 How to Extract and Set Up</h3>
+            <p>Windows has a built-in way to open ZIP files. Here's how:</p>
+            <ol style="font-size: 1.1rem; line-height: 2; margin: 20px 0;">
+                <li><strong>Locate the ZIP file</strong> – open your File Explorer and go to your Downloads folder.</li>
+                <li><strong>Double-click the ZIP file</strong> – this opens it like a folder.</li>
+                <li><strong>Click "Extract All"</strong> – this button appears at the top of the window. Follow the prompts, and keep the default extraction location (usually another folder in Downloads).</li>
+                <li><strong>Open the extracted folder</strong> – you'll now see a folder called <code>atlas-main</code>. This is your atlas application folder.</li>
+            </ol>
+            <p>
+                Now you're ready to launch. Inside the folder, look for the <code>atlas</code> executable file. It might be named <code>atlas.exe</code> or simply <code>atlas</code>, depending on the version.
+                <strong>Double-click it to run atlas</strong>. The app will open in your web browser at <code>http://localhost:3000</code>.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>🧠 Frequently Asked Questions (For Non-Techies)</h2>
+            
+            <h3>❓ "Is this safe to run on my computer?"</h3>
+            <p>
+                Yes. You're downloading it from a trusted source (GitHub), it's open-source, and it's specifically designed to run locally. It doesn't send any data out.
+            </p>
+
+            <h3>❓ "Do I need to know how to code to use atlas?"</h3>
+            <p>
+                Not at all! You need to know how to use the AI tools (like Claude Code), but atlas itself is a visual dashboard you operate through your regular web browser. It's made to be user-friendly for everyone.
+            </p>
+
+            <h3>❓ "I'm a beginner. Will this be too hard?"</h3>
+            <p>
+                The initial setup has one small step (extracting a ZIP file), but after that, it's very intuitive. We've designed it with a modern, clean interface that any computer user can navigate. You're just 10 minutes away from a superpowered overview of your AI assistants.
+            </p>
+
+            <h3>❓ "What if I get stuck?"</h3>
+            <p>
+                Because atlas is a community-driven open-source project, the best resource is the GitHub page itself. You can open an "Issue" (a question/help request) there, and the friendly community will guide you.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>⚙️ System Requirements (What You Need)</h2>
+            <ul>
+                <li>💻 <strong>Operating System:</strong> Windows 10 or Windows 11 (64-bit)</li>
+                <li>🧠 <strong>RAM:</strong> At least 8 GB (16 GB recommended for smooth operation with multiple agents)</li>
+                <li>💾 <strong>Disk Space:</strong> ~500 MB free space</li>
+                <li>🛠️ <strong>Other:</strong> A modern web browser (Chrome, Firefox, Edge).</li>
+                <li>🤖 <strong>AI Tools:</strong> You'll need at least one AI coding assistant (like Claude Code or Codex) to connect to atlas.</li>
+            </ul>
+            <p><em>(Note: These are general guidelines for a standard setup. Your experience may vary.)</em></p>
+        </div>
+
+        <div class="section">
+            <h2>🎯 Start Taking Control of Your AI Crew</h2>
+            <p>
+                atlas is more than a tool – it's a peace-of-mind assistant for the modern developer. It lets you harness the power of multiple AI agents without ever losing the thread of what's happening in your project. 
+                Say goodbye to confusion, and hello to a clear, organized view of all your AI work.
+            </p>
+            <p style="text-align: center; margin-top: 30px;">
+                <a href="https://github.com/KienNguyen1306/atlas" class="btn-primary" style="background: linear-gradient(45deg, #4CAF50, #8BC34A);">⬇️ Get atlas Free Now</a>
+            </p>
+            <p style="text-align: center; color: #7
