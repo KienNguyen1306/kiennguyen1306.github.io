@@ -211,7 +211,39 @@ section{
   color:var(--rosa);
 }
 
+/* DETALLE PACK COMPRENSIÓN LECTORA */
 
+#pack-comprension{
+    padding:70px 6%;
+    background:white;
+}
+
+.intro-pack{
+    max-width:850px;
+    margin:0 auto 35px;
+    text-align:center;
+    font-size:20px;
+    line-height:1.7;
+    color:var(--texto);
+}
+
+.caracteristicas-pack{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:16px;
+}
+
+.caracteristicas-pack div{
+    background:var(--rosa-claro);
+    border-radius:20px;
+    padding:22px 12px;
+    text-align:center;
+    color:var(--morado);
+    font-size:16px;
+    box-shadow:0 6px 18px rgba(68,32,125,.08);
+}
 /* CATEGORÍAS */
 
 .categorias{
@@ -556,7 +588,12 @@ footer h2{
 .producto-icono.portada-comprension{
     height:480px;
   }
+ .caracteristicas-pack{
+    grid-template-columns:repeat(2,1fr);
+   
+} 
   .lista-talleres{
+   
     grid-template-columns:repeat(2,1fr);
   }
 
@@ -795,7 +832,7 @@ Cuentos, fábula, canción, poema, leyenda y receta.
 $24.990 CLP
 </div>
 
-<a class="boton-producto" href="#talleres">
+<a class="boton-producto" href="#pack-comprension">
 Ver material
 </a>
 
@@ -859,7 +896,26 @@ Ver talleres
 </div>
 
 </section>
+<!-- DETALLE PACK COMPRENSIÓN LECTORA -->
 
+<section id="pack-comprension">
+
+    <h2 class="titulo-seccion">
+        Conoce el <span>Pack Comprensión Lectora ♡</span>
+    </h2>
+<p class="intro-pack">
+    Una colección de 9 talleres completos creados para trabajar la comprensión lectora
+    de manera progresiva, entretenida y significativa.
+    Incluye cuentos, fábula, canción, poema, leyenda y receta.
+<div class="caracteristicas-pack">
+    <div>📚 <strong>9 talleres completos</strong></div>
+    <div>📽️ <strong>Proyectables</strong></div>
+    <div>🖨️ <strong>Imprimibles</strong></div>
+    <div>✨ <strong>Plastificables</strong></div>
+    <div>💜 <strong>Listos para usar</strong></div>
+</div>
+
+</section>
 
 
 <section class="talleres" id="talleres">
